@@ -119,7 +119,8 @@ def infer_hardware(title, category=None, model=None):
     ryzen = re.search(r"(?<![A-Z0-9])(?:RYZEN\s*[3579]?\s*|R[3579]\s*[- ]?)([3579]\d{3}(?:X3D|XT|X|G|F)?)(?![A-Z0-9])", compact)
     component = re.search(r"(?<![A-Z0-9])(STM32[A-Z0-9]+|ESP32(?:-[A-Z0-9]+)?|ATMEGA\d+[A-Z]*|RP2040|CH340[A-Z]?|XC[0-9A-Z]+)(?![A-Z0-9])", compact)
     if gpu:
-        guess, detected = "gpu", f"{gpu[1]} {gpu[2]}" + (f" {re.sub(r'TI\s*SUPER', 'TI SUPER', gpu[3])}" if gpu[3] else "")
+        gpu_suffix = re.sub(r"TI\s*SUPER", "TI SUPER", gpu[3]) if gpu[3] else ""
+        guess, detected = "gpu", f"{gpu[1]} {gpu[2]}" + (f" {gpu_suffix}" if gpu_suffix else "")
     elif amd:
         guess, detected = "gpu", f"RX {amd[1]}" + (f" {amd[2]}" if amd[2] else "")
     elif arc:
