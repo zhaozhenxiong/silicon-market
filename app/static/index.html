@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#192a28">
+  <meta name="description" content="本地闲鱼硬件行情观察系统，持续记录挂牌价格、商品状态和样本售出占比。">
+  <title>硅价 · 硬件市场观察</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a href="#overview" class="brand" aria-label="硅价首页"><span class="brand-symbol">硅</span><span class="brand-word">硅价<small>SILICON MARKET</small></span></a>
+    <div class="workspace"><span class="workspace-icon" data-icon="layers"></span><span>我的硬件观察站<small>LOCAL WORKSPACE</small></span><span class="workspace-dot"></span></div>
+    <p class="nav-caption">观察与分析</p>
+    <nav aria-label="主导航">
+      <a href="#overview" class="nav-item" data-nav="overview"><span data-icon="grid"></span>市场总览</a>
+      <a href="#items" class="nav-item" data-nav="items"><span data-icon="list"></span>商品样本</a>
+      <a href="#tasks" class="nav-item" data-nav="tasks"><span data-icon="radar"></span>监控任务</a>
+      <span class="nav-divider"></span>
+      <a href="#collector" class="nav-item" data-nav="collector"><span data-icon="download"></span>数据采集</a>
+      <a href="#methodology" class="nav-item" data-nav="methodology"><span data-icon="book"></span>统计口径<span class="nav-small">?</span></a>
+    </nav>
+    <div class="sidebar-bottom"><div class="local-icon" data-icon="database"></div><strong>数据留在本机</strong><p>持续观察，让每一次判断<br>都有数据可循。</p><span class="local-badge"><i></i> SQLite 本地存储</span></div>
+    <div class="sidebar-footer"><span class="avatar">本</span><div>本地研究环境<small>个人工作空间</small></div><span data-icon="shield"></span></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><button class="icon-button menu-toggle" id="menu-toggle" aria-label="展开导航"><span data-icon="menu"></span></button><div class="breadcrumbs"><span>工作空间</span><span class="crumb-separator">/</span><strong id="breadcrumb">市场总览</strong></div><div class="topbar-right"><span class="connection" id="connection"><i></i> 本地服务连接中</span><span class="topbar-divider"></span><span class="today" id="today"></span><span class="topbar-logo" data-icon="cpu"></span></div></header>
+    <main id="main" tabindex="-1">
+      <div class="page-heading"><div><p class="eyebrow" id="eyebrow">HARDWARE MARKET INTELLIGENCE</p><h1 id="page-title">市场总览<span class="title-dot"></span></h1><p class="page-subtitle" id="page-subtitle">追踪闲鱼硬件价格，读懂市场供需的变化。</p></div><div class="heading-actions" id="heading-actions"></div></div>
+      <div class="source-strip"><div class="source-switch" role="group" aria-label="行情视图"><button data-mode="market" class="active"><span data-icon="radio"></span>真实行情</button><button data-mode="indices"><span data-icon="trend"></span>综合指数</button></div><div class="source-description" id="source-description"><span class="source-dot"></span>真实观测样本 · 挂牌与 App 成交参考分别记录</div></div>
+      <div id="view"><div class="loading-panel"><span class="spinner"></span>正在读取本地数据…</div></div>
+      <footer class="page-footer"><span>硅价 <b>·</b> SILICON MARKET</span><span>观测样本 ≠ 全市场 <span class="footer-dot">·</span> 挂牌价 ≠ 成交价 <a href="#methodology">了解统计口径 <span aria-hidden="true">↗</span></a></span></footer>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+</body>
+</html>

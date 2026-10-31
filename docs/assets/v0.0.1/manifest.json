@@ -1,0 +1,73 @@
+{
+  "schema_version": "public-preview-assets-v1",
+  "release": "v0.0.1",
+  "prepared_on": "2026-10-31",
+  "data_notice": "截图来自实际开发验收环境，只用于说明界面与数据口径；可见数据不代表安装包自带数据、全市场行情或安装后的当前状态。新安装空库正常。",
+  "selection": "Only the three reviewed application screenshots and existing favicon were selected. No output directory bundle, database, phone evidence, account session, or model conversation is included.",
+  "assets": [
+    {
+      "file": "indices.png",
+      "source_file": "output/image-trend-indices.png",
+      "source_format": "JPEG",
+      "format": "PNG",
+      "width": 1280,
+      "height": 720,
+      "color_mode": "RGB",
+      "bytes": 281285,
+      "sha256": "d3a5c9a93afe4fbba0c2a11b84a03daa73feadc8322e580014fbd555cff335e7",
+      "source_sha256": "5e6f248e1b97334dfb81c55e875bdd48e17849342e0d855611665030148365cf",
+      "decoded_rgb_sha256": "3c949ddfd2378fa031aea3274ab7c922f89996576fa18ec67221f1eb979aecda",
+      "purpose": "图像估算指数主界面；保留47.7行情分、58.3综合指数、51.3%来源覆盖与62.5%行情权重覆盖。",
+      "data_notice": "截图来自实际开发验收环境，只用于说明界面与数据口径；可见数据不代表安装包自带数据、全市场行情或安装后的当前状态。新安装空库正常。",
+      "processing": "Re-encoded source decoded RGB pixels as optimized PNG; identical decoded RGB pixels; metadata omitted.",
+      "privacy_review": "Visible application UI and aggregate/model data only; no personal account, address, marketplace seller photo, cookies, or raw phone image."
+    },
+    {
+      "file": "market-trends.png",
+      "source_file": "output/image-market-trends.png",
+      "source_format": "JPEG",
+      "format": "PNG",
+      "width": 1280,
+      "height": 720,
+      "color_mode": "RGB",
+      "bytes": 278718,
+      "sha256": "ebba018c9521dd7ec1043036cbf38890e81e58865774a28b80e2e676aec536cf",
+      "source_sha256": "53daf8f40c37a48d6f033dd02910ff643d385441c212a61ed3e6682cfbe6e228",
+      "decoded_rgb_sha256": "863fdfec1dc1c3bd1b4174ed0b525c336873ea666360ae781d2b67717da8aa03",
+      "purpose": "市场相对曲线示例：RTX 5070 TI与iPhone 15 256GB，纵轴为图内相对高低0–100。",
+      "data_notice": "截图来自实际开发验收环境，只用于说明界面与数据口径；可见数据不代表安装包自带数据、全市场行情或安装后的当前状态。新安装空库正常。",
+      "processing": "Re-encoded source decoded RGB pixels as optimized PNG; identical decoded RGB pixels; metadata omitted.",
+      "privacy_review": "Visible application UI and aggregate/model data only; no personal account, address, marketplace seller photo, cookies, or raw phone image."
+    },
+    {
+      "file": "workflow.png",
+      "source_file": "output/project-workflow.png",
+      "source_format": "JPEG",
+      "format": "PNG",
+      "width": 974,
+      "height": 924,
+      "color_mode": "RGB",
+      "bytes": 263490,
+      "sha256": "8424683e1daf641ef6f29eaaba25080b1194239d0d69991eeeddb67b2a349fa1",
+      "source_sha256": "43162f857d40c7900f9e5a34a8beb789442a29e9e57ac0b6f4a4dee811e80522",
+      "decoded_rgb_sha256": "6b479a929974605b3902dbb63651a4c4421adea6ef43b5e835373833f1486694",
+      "purpose": "项目流程界面：来源、网页采集、规则审计、离线复核、质量验收与指标重算。",
+      "data_notice": "截图来自实际开发验收环境，只用于说明界面与数据口径；可见数据不代表安装包自带数据、全市场行情或安装后的当前状态。新安装空库正常。",
+      "processing": "Re-encoded source decoded RGB pixels as optimized PNG; identical decoded RGB pixels; metadata omitted.",
+      "privacy_review": "Visible application UI and aggregate/model data only; no personal account, address, marketplace seller photo, cookies, or raw phone image."
+    },
+    {
+      "file": "logo.svg",
+      "source_file": "app/static/favicon.svg",
+      "source_format": "SVG",
+      "format": "SVG",
+      "view_box": "0 0 64 64",
+      "bytes": 252,
+      "sha256": "6e4a0962567798fb18cca7eff151a67391eb6758fbf182a10dedf0a54e5f79d2",
+      "source_sha256": "6e4a0962567798fb18cca7eff151a67391eb6758fbf182a10dedf0a54e5f79d2",
+      "purpose": "应用原有图标；不包含用户数据。",
+      "data_notice": "原有应用图标，不代表行情数据。",
+      "processing": "Byte-for-byte copy; no external resources or scripts."
+    }
+  ]
+}

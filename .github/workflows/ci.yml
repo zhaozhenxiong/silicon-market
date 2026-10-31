@@ -1,0 +1,43 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+      - uses: astral-sh/setup-uv@v10.3.3
+      - name: Install locked development dependencies
+        run: uv sync --locked --group dev
+      - name: Python tests
+        run: uv run --locked pytest -q
+      - name: Node tests
+        run: node --test tests/*.mjs
+      - name: JavaScript and shell syntax
+        run: |
+          node --check app/static/app.js
+          for script in automation/*.mjs; do node --check "$script"; done
+          bash -n start.sh project.sh automation/*.sh
+      - name: Release packaging checks
+        run: |
+          uv run --locked python scripts/package_release.py
+          (cd dist && sha256sum -c SHA256SUMS)

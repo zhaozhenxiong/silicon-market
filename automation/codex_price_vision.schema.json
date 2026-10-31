@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "screen_kind", "model_text", "metric", "price", "price_text", "date", "date_text", "is_daily_tooltip", "confidence", "evidence_quotes", "warnings"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["codex-price-vision-v1"]},
+    "screen_kind": {"type": "string", "enum": ["market_overview", "daily_tooltip", "home", "search", "locked", "verification", "disconnected", "unknown"]},
+    "model_text": {"type": ["string", "null"]},
+    "metric": {"type": ["string", "null"], "enum": ["rolling_7d_sold_mean", null]},
+    "price": {"type": ["number", "null"]},
+    "price_text": {"type": ["string", "null"]},
+    "date": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "date_text": {"type": ["string", "null"]},
+    "is_daily_tooltip": {"type": "boolean"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "evidence_quotes": {"type": "array", "items": {"type": "string"}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}
